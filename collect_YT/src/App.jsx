@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar';
+import './App.css';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Services from './components/pages/Services';
+import Products from './components/pages/Products';
+import SignUp from './components/pages/SignUp';
+import ExpandCard from './components/ExpandCard'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+<<<<<<< Updated upstream
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -29,6 +34,21 @@ function App() {
       </p>
     </div>
   )
+=======
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' exact component={Home} />
+          {/* <Route path='/services' component={Services} />
+          <Route path='/products' component={Products} />
+          <Route path='/sign-up' component={SignUp} /> */}
+        </Routes>
+      </Router>
+      
+    </>
+  );
+>>>>>>> Stashed changes
 }
 
-export default App
+export default App;

@@ -1,0 +1,26 @@
+/* card_body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./public/images/img-1.jpg');
+  } */
+  
+  .center_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('./public/images/cog_bias_1.png'); */
+  }
+  
+  .cardBT {
+    background: white;
+    padding: 3rem 5rem;
+    color: black;
+  }
+  
+  .cardBT p {
+    padding-top: 1rem;
+    line-height: 150%;
+  }
+  

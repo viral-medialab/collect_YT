@@ -1,0 +1,120 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url("https://wallpapercave.com/wp/wp6425557.jpg") center center/cover; */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+/* .container:hover .card{
+    filter: blur(10px);
+}
+
+.container .card:hover{
+    margin-top: -15px;
+    filter: blur(0px);
+} */
+
+.card{
+    height: 320px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+    /* background: black; */
+    background: rgb(238, 237, 237, 0.2);
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* box-shadow: 20 30 50px #444; */
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+    /* box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    transition: 0.4s;
+}
+
+mark { 
+    background-color: gray;
+    color: white;
+  }
+
+
+.thumbnail {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card h1{
+    position: absolute;
+    color: #fff;
+    font-weight: 500;
+    padding: 15px;
+    top: 310px;
+    transition: 0.8s;
+}
+
+.card:hover h1{
+    top: 500px;
+}
+
+.card .info{
+    position: absolute;
+    opacity: 0;
+    transition: 0.8s;
+    height: 500px;
+    width: 350px;
+    background: rgba(0,0,0,0.7);
+}
+
+.card:hover .info{
+    opacity: 1;
+}
+
+.card .info p{
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.card .info h2{
+    color: #fff;
+    font-weight: 400;
+    padding-top: 150px;
+    padding-left: 20px;
+    transition: 0.8s;
+}
+
+.card:hover .info h2{
+    padding-top: 20px;
+}
+
+.card .info a{
+    color: #3549fd;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.card .info a:hover{
+    color: #234991;
+}
+
+.card .iframe{
+    width: 350px;
+    height: 300px;
+}

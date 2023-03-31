@@ -1,0 +1,21 @@
+.center_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('./public/images/cog_bias_1.png'); */
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid > div {
+    display: flex;
+  }
+  
+  .fa-person {
+    color: black;
+  }
+  
