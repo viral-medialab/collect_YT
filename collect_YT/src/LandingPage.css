@@ -1,0 +1,55 @@
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import WoNWorkingImage from "./assets/img/won-working.png";
+import "./IntroToWoN.css";
+
+gsap.registerPlugin(ScrollTrigger);
+
+function IntroToWoN() {
+  const imageRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: imageRef.current,
+        start: "top center",
+        scrub: true,
+        markers: false,
+      },
+    });
+
+    tl.fromTo(
+      imageRef.current,
+      { opacity: 0.5, scale: 1 },
+      { opacity: 1, scale: 0.8 }
+    ).fromTo(
+      textRef.current,
+      { y: "100%", opacity: 0 },
+      { y: "0%", opacity: 1 },
+      "-=0.5"
+    );
+  }, []);
+
+  return (
+    <div className="intro-to-won">
+      <div className="intro-to-won-image">
+        <img src={WoNWorkingImage} alt="Won working" ref={imageRef} />
+      </div>
+      <div className="intro-to-won-text" ref={textRef}>
+        <h1>Welcome to WoN</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum
+          velit sed mauris commodo hendrerit. Sed maximus diam vitae diam
+          faucibus, id ullamcorper enim suscipit. Integer fermentum justo eu
+          nisl imperdiet venenatis. Nam sit amet convallis nunc. Nullam et urna
+          eget nulla ultricies convallis. Morbi suscipit leo vel eros eleifend
+          convallis. Sed fermentum augue sed lacus malesuada eleifend.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default IntroToWoN;
